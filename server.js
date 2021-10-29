@@ -6,10 +6,10 @@ let ourApp = express();
 let dbName = 'trial'  
 let db;
 
-let port = process.env.port
+let port = process.env.PORT;
 if(port == null || port == ""){
-  port = 3000
-}
+  port = 3000;
+};
 
 ourApp.use(express.static('public'));
 let connectString = 'mongodb://tejasDb:jtYNnSmnyD7q4WCy@cluster0-shard-00-00.w7hgt.mongodb.net:27017,cluster0-shard-00-01.w7hgt.mongodb.net:27017,cluster0-shard-00-02.w7hgt.mongodb.net:27017/trial?ssl=true&replicaSet=atlas-he0k6o-shard-0&authSource=admin&retryWrites=true&w=majority'
